@@ -1,0 +1,13 @@
+{
+  "name": "webpack_scss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "dmitryrec",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
