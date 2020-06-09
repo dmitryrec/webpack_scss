@@ -55,7 +55,6 @@ p {
             animation: square 10s linear infinite;
             display: inline-block;
             border-radius: 10%;
-
         }
     }
 }
@@ -63,12 +62,18 @@ p {
 @keyframes square {
     0% {
         transform: rotate(0turn);
+        box-shadow: 0 0 5px $black;
+
     }
     50% {
         background: $light-blue;
         border-radius: 50%;
+        box-shadow: 0 0 25px $blue;
+
     }
     100% {
         transform: rotate(1turn);
+        box-shadow: 0 0 5px $black;
+
     }
 }
