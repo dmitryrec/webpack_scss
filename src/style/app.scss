@@ -21,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+    margin: 10px;
     text-transform: uppercase;
     text-align: center;
     padding: 10px 0;
@@ -29,7 +29,9 @@ h6 {
 
 p {
     margin: 0;
-    padding: 15px 0;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.7;
 }
 
 .container {
@@ -46,34 +48,54 @@ p {
         box-shadow: 0 0 10px $light-gray;
         border-radius: 5px;
 
-        .animated-square {
+        .square {
             width: 50px;
             height: 50px;
             background: $blue;
             position: relative;
             margin: 20px 0;
-            animation: square 10s linear infinite;
             display: inline-block;
             border-radius: 10%;
+        }
+        
+        .animated-square-right {
+            animation: square-right  10s linear infinite;
+        }
+
+        .animated-square-left {
+            animation: square-left  10s linear infinite;
         }
     }
 }
 
-@keyframes square {
+@keyframes square-right {
     0% {
         transform: rotate(0turn);
-        box-shadow: 0 0 5px $black;
-
+        box-shadow: 0 0 5px $blue;
     }
     50% {
         background: $light-blue;
         border-radius: 50%;
-        box-shadow: 0 0 25px $blue;
+        box-shadow: 0 0 25px $black;
+    }
+    100% {
+        transform: rotate(-1turn);
+        box-shadow: 0 0 5px $blue;
+    }
+}
 
+@keyframes square-left {
+    0% {
+        transform: rotate(0turn);
+        box-shadow: 0 0 5px $blue;
+    }
+    50% {
+        background: $light-blue;
+        border-radius: 50%;
+        box-shadow: 0 0 25px $black;
     }
     100% {
         transform: rotate(1turn);
-        box-shadow: 0 0 5px $black;
-
+        box-shadow: 0 0 5px $blue;
     }
 }
